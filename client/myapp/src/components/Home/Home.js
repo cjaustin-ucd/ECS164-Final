@@ -23,7 +23,7 @@ export default function Home() {
         </div>
       </div>
       <div className="home-card-container">
-        <div className="home-card-content">
+        <div className="home-card-content" onClick={()=>{navigate("/tips")}}>
           <h1>Mental Health Tips</h1>
           <div className="home-card-image"
             style={{
