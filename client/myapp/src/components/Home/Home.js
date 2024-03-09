@@ -25,8 +25,6 @@ export default function Home() {
       <div className="home-card-container">
         <div className="home-card-content" onClick={()=>{navigate("/tips")}}>
           <h1>Mental Health Tips</h1>
-        <div className="home-card-content">
-          <h1 className='home-card-title'>Mental Health Tips</h1>
           <div className="home-card-image"
             style={{
               backgroundImage: `url(${tips})`,
