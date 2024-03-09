@@ -18,7 +18,7 @@ function Sleep() {
   let hoursSlept_ref = useRef(hoursSlept);
   const [minutes, setMinutes] = useState(0);
   let minutes_ref = useRef(minutes);
-  const [isEnoughSleep, setisEnoughSleep] = useState(0);
+  const [isEnoughSleep, setisEnoughSleep] = useState(null);
   let isEnoughSleep_ref = useRef(isEnoughSleep);
 
   function setStateRef(setState, ref, src) {
@@ -89,11 +89,13 @@ function Sleep() {
             />
           </div>
         </LocalizationProvider>
-        <h1>You slept for {hoursSlept} hours and {minutes} minutes </h1>
+        {sleepTime && wakeTime &&
+          <h1>You slept for {hoursSlept} hours and {minutes} minutes </h1>
+        }
         {isEnoughSleep && 
           <p>Great! You got at least the recommended amount of sleep!</p>
         }
-        {!isEnoughSleep && 
+        {!isEnoughSleep && isEnoughSleep != null &&
           <p>It is recommended to sleep for at least 7 hours to feel rejuvenated!</p>
         }
       </form>
