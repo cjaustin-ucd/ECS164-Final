@@ -13,7 +13,7 @@ export default function Home() {
     <div className="home-container">
       <div className="home-card-container">
         <div className="home-card-content" >
-          <h1>Daily Mood Tracker</h1>
+          <h1 className='home-card-title'>Daily Mood Tracker</h1>
           <div className="home-card-image"
             style={{
               backgroundImage: `url(${emoji})`,
@@ -24,7 +24,7 @@ export default function Home() {
       </div>
       <div className="home-card-container">
         <div className="home-card-content">
-          <h1>Mental Health Tips</h1>
+          <h1 className='home-card-title'>Mental Health Tips</h1>
           <div className="home-card-image"
             style={{
               backgroundImage: `url(${tips})`,
@@ -35,7 +35,7 @@ export default function Home() {
       </div>
       <div className="home-card-container">
         <div className="home-card-content" onClick={()=>{navigate("/sleep-tracker")}}>
-          <h1>Sleep Tracker</h1>
+          <h1 className='home-card-title'>Sleep Tracker</h1>
           <div className="home-card-image"
             style={{
               backgroundImage: `url(${sleep})`,
@@ -45,7 +45,7 @@ export default function Home() {
       </div>
       <div className="home-card-container">
         <div className="home-card-content">
-          <h1>Statistics</h1>
+          <h1 className='home-card-title'>Statistics</h1>
           <div className="home-card-image"
             style={{
               backgroundImage: `url(${statistics})`,
