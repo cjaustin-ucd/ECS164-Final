@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Slider from '@mui/material/Slider';
 import "./Tracker.css"
-import happy from "../../../images/home/happy.png";
-import sad from "../../../images/home/sad.webp";
-import neutral from "../../../images/home/neutral.png";
-import angry from "../../../images/home/angry.png"
-import excited from "../../../images/home/excited.png"
+import happy from "../../images/tracker/happy.png";
+import sad from "../../images/tracker/sad.webp";
+import neutral from "../../images/tracker/neutral.png";
+import angry from "../../images/tracker/angry.png"
+import excited from "../../images/tracker/excited.png"
 
 export default function Tracker() {
   const [value, setValue] = React.useState(50);
