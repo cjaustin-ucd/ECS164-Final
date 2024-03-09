@@ -11,7 +11,7 @@ export default function Home() {
   const navigate = useNavigate();
   return (
     <div className="home-container">
-      <div className="home-card-container">
+      <div className="home-card-container" onClick={()=>{navigate("/mood-tracker")}}>
         <div className="home-card-content" >
           <h1>Daily Mood Tracker</h1>
           <div className="home-card-image"
