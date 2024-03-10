@@ -161,7 +161,7 @@ function Tips() {
               <li >Try to enjoy something you like</li>
                 <ul>
                   <li>Favorite food</li>
-                  <li>Favorite hobyy</li>
+                  <li>Favorite hobby</li>
                 </ul>
               <li>Go for a run or take a breather</li>
               <li>Talk with someone</li>

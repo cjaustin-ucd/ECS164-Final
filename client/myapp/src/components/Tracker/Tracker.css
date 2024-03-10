@@ -36,3 +36,8 @@ button:hover {
     background-color: #ebab34;
 }
 
+.arrow {
+    margin-left:400px;
+    margin-top:40px;
+    position:absolute;
+}

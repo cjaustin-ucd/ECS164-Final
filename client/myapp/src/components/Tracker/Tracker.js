@@ -6,8 +6,12 @@ import sad from "../../images/tracker/sad.webp";
 import neutral from "../../images/tracker/neutral.png";
 import angry from "../../images/tracker/angry.png"
 import excited from "../../images/tracker/excited.png"
+import { useNavigate } from 'react-router-dom';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+
 
 export default function Tracker() {
+  const navigate = useNavigate();
   const [value, setValue] = React.useState(50);
 
   const handleChange = (event, newValue) => {
@@ -33,6 +37,9 @@ export default function Tracker() {
 
   return (
     <div>
+        <div style={{width:'1200px',display:'flex'}}>
+          <ArrowBackIosIcon className="arrow" sx={{alignSelf:'flex-start',cursor:'pointer'}} onClick={()=>{navigate("/")}}/>
+        </div>
         <h1>How are you feeling today?</h1>
         <img src={mood} alt="happy"></img>
         <div className="input">
@@ -40,7 +47,7 @@ export default function Tracker() {
             <Slider id="slider" value={value} onChange={handleChange} />
             <h4>Positive</h4>
         </div>
-        <button>Submit</button>
+        <button onClick={()=>{navigate("/")}}>Submit</button>
         <div id="info">
         <p>Your reponse will be submitted anonymously to:</p>
             <ul>
