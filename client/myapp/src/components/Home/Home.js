@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </div>
       <div className="home-card-container">
-        <div className="home-card-content">
+        <div className="home-card-content" onClick={()=>{navigate("/statistics")}}>
           <h1 className='home-card-title'>Statistics</h1>
           <div className="home-card-image"
             style={{
