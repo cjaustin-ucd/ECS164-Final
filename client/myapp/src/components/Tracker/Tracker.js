@@ -47,7 +47,7 @@ export default function Tracker() {
             <Slider id="slider" value={value} onChange={handleChange} />
             <h4>Positive</h4>
         </div>
-        <button onClick={()=>{navigate("/")}}>Submit</button>
+        <button onClick={()=>{navigate("/submitted")}}>Submit</button>
         <div id="info">
         <p>Your reponse will be submitted anonymously to:</p>
             <ul>
