@@ -51,8 +51,8 @@ export default function Tracker() {
         <div id="info">
         <p>Your reponse will be submitted anonymously to:</p>
             <ul>
-                <li>Lara Simons(General Manager, Publix, Williamsburg)</li>
-                <li>Dan Smith(Academic Advisor, William and Mary)</li>
+                <li>Lara Simons (General Manager, Publix, Williamsburg)</li>
+                <li>Dan Smith (Academic Advisor, William and Mary)</li>
             </ul>
         </div>
     </div>
