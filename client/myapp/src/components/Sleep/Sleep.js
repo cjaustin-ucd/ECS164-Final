@@ -55,6 +55,9 @@ function Sleep() {
   const calcTimeSlept = () => {
     let hours = wakeTime_ref.current.$H - sleepTime_ref.current.$H
     let min = wakeTime_ref.current.$m - sleepTime_ref.current.$m
+    if (hours < 0) {
+      hours = 24 + hours
+    }
     if (min < 0) {
       min = 60 + min
       if (hours !== 0) {
@@ -85,7 +88,6 @@ function Sleep() {
             <p>What time did you wake up?</p>
             <StaticTimePicker
               label="Wake Time"
-              minTime={sleepTime}
               value={wakeTime}
               onChange={handleWakeTimeChange}
               slotProps={{actionBar: {actions: ['cancel']}}}
