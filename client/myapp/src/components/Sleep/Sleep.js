@@ -10,6 +10,7 @@ import { keyframes, css } from '@mui/system';
 import { Link } from 'react-router-dom';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 function Sleep() {
   const [sleepTime, setSleepTime] = useState(null);
@@ -48,6 +49,11 @@ function Sleep() {
       } else {
         setStateRef(setisEnoughSleep, isEnoughSleep_ref, false)
       }
+      axios.post("http://localhost:5000/sendSleepVal", {
+        user: "Jack",
+        hours: timeSlept.hours + (timeSlept.min / 60)
+      }).then((response) => {console.log("succssfully sent")})
+      .catch((error) => {console.log(error)})
     }
     setStateRef(setHoursSlept, hoursSlept_ref, timeSlept.hours)
     setStateRef(setMinutes, minutes_ref, timeSlept.min)

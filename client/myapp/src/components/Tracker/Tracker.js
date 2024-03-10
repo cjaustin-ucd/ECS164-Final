@@ -8,7 +8,7 @@ import angry from "../../images/tracker/angry.png"
 import excited from "../../images/tracker/excited.png"
 import { useNavigate } from 'react-router-dom';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-
+import axios from "axios"
 
 export default function Tracker() {
   const navigate = useNavigate();
@@ -47,7 +47,14 @@ export default function Tracker() {
             <Slider id="slider" value={value} onChange={handleChange} />
             <h4>Positive</h4>
         </div>
-        <button onClick={()=>{navigate("/submitted")}}>Submit</button>
+        <button onClick={()=>{
+          axios.post("http://localhost:5000/sendMoodVal", {
+            user: "Jack",
+            mood: value
+          }).then((response) => {console.log("succssfully sent")})
+          .catch((error) => {console.log(error)})
+          navigate("/submitted")
+        }}>Submit</button>
         <div id="info">
         <p>Your reponse will be submitted anonymously to:</p>
             <ul>
