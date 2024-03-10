@@ -8,6 +8,8 @@ import TextField from '@mui/material/TextField';
 import { ThemeContext } from '@mui/material/styles';
 import { keyframes, css } from '@mui/system';
 import { Link } from 'react-router-dom';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { useNavigate } from 'react-router-dom';
 
 function Sleep() {
   const [sleepTime, setSleepTime] = useState(null);
@@ -20,6 +22,7 @@ function Sleep() {
   let minutes_ref = useRef(minutes);
   const [isEnoughSleep, setisEnoughSleep] = useState(null);
   let isEnoughSleep_ref = useRef(isEnoughSleep);
+  const navigate = useNavigate();
 
   function setStateRef(setState, ref, src) {
     setState(src);
@@ -66,9 +69,9 @@ function Sleep() {
 
   return (
     <div>
-      <Link to='/' className='home-button'>
-        <button className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1e6y48t-MuiButtonBase-root-MuiButton-root">HOME</button>
-      </Link>
+      <div style={{width:'1200px',display:'flex'}}>
+          <ArrowBackIosIcon className="arrow" sx={{alignSelf:'flex-start',cursor:'pointer'}} onClick={()=>{navigate("/")}}/>
+      </div>
       <form onSubmit={handleSubmit}>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <div className="time-picker-container">
